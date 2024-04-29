@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/fontawsome/css/all.min.css">
+    <link rel="stylesheet" href="./css/fontawsome/css/fontawesome.min.css">
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+
+
+</head>
+
+<body class="overflow-x-hidden overflow bg-[#f3f3f1] font-mono">
+
+
+<div class="all-toast flex justify-center items-center absolute right-10 z-20 mt-4">
+
+    <div id="toast-success" class="toast hidden flex flex-col items-center w-full max-w-xs mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
+        <div class="flex justify-center items-center p-4">
+
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-green-500 bg-green-100 rounded-lg dark:bg-green-800 dark:text-green-200">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="sr-only">Check icon</span>
+            </div>
+            <div class="ms-3 text-sm font-normal toast-message">successfully.</div>
+            <button type="button" class="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-success" aria-label="Close">
+                <span class="sr-only">Close</span>
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+            </button>
+        </div>
+        <div class="border-b"><div class="b border-b-2 border-green-500"></div></div>
+    </div>
+
+
+
+    <div id="toast-danger" class="toast hidden flex flex-col items-center w-full max-w-xs mb-4 text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
+
+        <div class="flex justify-center items-center p-4">
+
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-red-500 bg-red-100 rounded-lg dark:bg-red-800 dark:text-red-200">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 11.793a1 1 0 1 1-1.414 1.414L10 11.414l-2.293 2.293a1 1 0 0 1-1.414-1.414L8.586 10 6.293 7.707a1 1 0 0 1 1.414-1.414L10 8.586l2.293-2.293a1 1 0 0 1 1.414 1.414L11.414 10l2.293 2.293Z"/>
+                </svg>
+                <span class="sr-only">Error icon</span>
+            </div>
+            <div class="ms-3 text-sm font-normal toast-message">Danger.</div>
+            <button type="button" class="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-danger" aria-label="Close">
+                <span class="sr-only">Close</span>
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+            </button>
+        </div>
+        <div class="border-b"><div class="b border-b-2 border-red-500"></div></div>
+    </div>
+
+
+    <div id="toast-warning" class="toast hidden flex flex-col items-center w-full max-w-xs text-gray-500 bg-white rounded-lg shadow dark:text-gray-400 dark:bg-gray-800" role="alert">
+        <div class="flex justify-center items-center p-4">
+
+            <div class="inline-flex items-center justify-center flex-shrink-0 w-8 h-8 text-orange-500 bg-orange-100 rounded-lg dark:bg-orange-700 dark:text-orange-200">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM10 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm1-4a1 1 0 0 1-2 0V6a1 1 0 0 1 2 0v5Z"/>
+                </svg>
+                <span class="sr-only">Warning icon</span>
+            </div>
+            <div class="ms-3 text-sm font-normal toast-message">Waring.</div>
+            <button type="button" class="ms-auto -mx-1.5 -my-1.5 bg-white text-gray-400 hover:text-gray-900 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-100 inline-flex items-center justify-center h-8 w-8 dark:text-gray-500 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700" data-dismiss-target="#toast-warning" aria-label="Close">
+                <span class="sr-only">Close</span>
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+            </button>
+        </div>
+        <div class="border-b"><div class="b border-b-2 border-orange-500"></div></div>
+    </div>
+</div>
+
+
+    
+
+
+
+
+
+    <section class="section flex gap-2 w-screen py-8">
+
+        <!-- nav bar  --1st f-nav -->
+        <nav id="f-nav">
+            <div class="navbar sticky top-8 bg-white rounded-2xl py-4 h-[92vh] w-[240px] shadow-lg flex flex-col justify-between ml-2">
+
+                <ul class="">
+                    <!-- logo  -->
+                    <li class="my-4">
+                        <a href="#" class=" text-2xl p-4">
+                            <i class="fa-solid fa-4 shadow-sm fa-bounce text-sky-700"></i>
+                            <span class="font-black text-black">Links</span>
+                        </a>
+                    </li>
+
+                    <!-- items  -->
+                    <li class="flex justify-between gap-2 py-2 pr-2 active text-sky-700">
+                        <span class="border-l-[6px] border-sky-700 rounded-r-lg"></span>
+                        <a href="#" class="rounded-full p-4 w-full bg-[#f3f3f1]">
+                            <i class="fa-solid fa-xmarks-lines"></i>
+                            <span>Links</span>
+                        </a>
+                    </li>
+
+                    <!-- items  -->
+                    <li class="flex justify-between gap-2 py-2 pr-2 active hover:text-sky-700 group">
+                        <span class="border-l-[6px] border-transparent group-active:border-sky-700 rounded-r-lg"></span>
+                        <a href="#" class="rounded-full p-4 w-full group-hover:bg-[#f3f3f1]">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                            <span>Appearance</span>
+                        </a>
+                    </li>
+
+                    <!-- items  -->
+                    <li class="flex justify-between gap-2 py-2 pr-2 active hover:text-sky-700 group">
+                        <span class="border-l-[6px] border-transparent group-active:border-sky-700 rounded-r-lg"></span>
+                        <a href="#" class="rounded-full p-4 w-full group-hover:bg-[#f3f3f1]">
+                            <i class="fa-solid fa-gear"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <ul>
+                    <!-- items  -->
+                    <li class="flex justify-between gap-2 py-2 pr-2 active:text-sky-700 group">
+                        <span class="border-l-[6px] border-transparent border-sky-700 rounded-r-lg"></span>
+                        <a href="#"
+                            class="rounded-full p-3 w-full bg-[#f3f3f1] border-2 border-transparent active:border- active:border-gray-500">
+                            <i class="fa-solid fa-bolt"></i>
+                            <span>Try for Free</span>
+                        </a>
+                    </li>
+
+                    <!-- user id  -->
+                    <li class="flex justify-between gap-2 py-2 pr-2 activetext-sky-700 group font-bold">
+                        <span class="border-l-[6px] border-transparent border-sky-700 rounded-r-lg"></span>
+                        <a href="#"
+                            class="rounded-full border-2 border-gray-300  active:border-gray-500 p-2 w-full flex items-center justify-start gap-2">
+                            <img src=" " alt="" width="20"
+                                class=" bg-slate-300 text-sky-700 rounded-full bg-[url('./images/user.webp')] bg-cover bg-center w-8 h-8 p-0.5 imgBtn">
+                            <span class="w-8 text-ellipsis font-sans">@<span class="userName"></span></span>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </nav>
+
+
+        <!-- nav bar  -- 2nd s-nav -->
+        <nav id="s-nav" class=" h-28 flex flex-col">
+
+            <ul class="flex justify-between items-center">
+
+
+                <!-- logo  -->
+                <li class="my-4">
+                    <a href="#" class=" text-2xl p-4">
+                        <i class="fa-solid fa-4 shadow-sm fa-bounce text-sky-700"></i>
+                        <span class="font-black text-black">Links</span>
+                    </a>
+                </li>
+                <!-- items  -->
+                <li class="flex justify-between gap-2 py-2 pr-2 active:text-sky-700 group">
+
+                    <a href="#"
+                        class="rounded-full p-2 w-full bg-[#f3f3f1] border-2 border-gray-300 active:border- active:border-gray-500">
+                        <i class="fa-solid fa-bolt"></i>
+                        <span>Try for Free</span>
+                    </a>
+                </li>
+
+            </ul>
+
+            <ul class="flex justify-evenly items-center w-full h-full bg-white">
+
+                <!-- items  -->
+                <li class=" pr-2 active text-sky-700 ">
+                    <!-- <span class="border-t-[6px]  border-sky-700"></span> -->
+                    <a href="#"
+                        class="flex flex-col justify-center items-center gap-2 border-t-[6px]  border-sky-700 p-2 w-full bg-[#f3f3f1]">
+                        <i class="fa-solid fa-xmarks-lines"></i>
+                        <span>Links</span>
+                    </a>
+                </li>
+
+                <!-- items  -->
+                <li class=" pr-2 active hover:text-sky-700 group">
+                    <span class="border-t-[6px] border-transparent group-active:border-sky-700 "></span>
+                    <a href="#"
+                        class="flex flex-col justify-center items-center gap-2 group-hover:border-t-[6px]  group-hover:border-sky-700 p-2 w-full group-hover:bg-[#f3f3f1]">
+                        <i class="fa-solid fa-boxes-stacked"></i>
+                        <span>Appearance</span>
+                    </a>
+                </li>
+
+                <!-- items  -->
+                <li class="pr-2 active hover:text-sky-700 group">
+                    <span class="border-t-[6px] border-transparent group-active:border-sky-700 "></span>
+                    <a href="#"
+                        class="flex flex-col justify-center items-center gap-2 group-hover:border-t-[6px]  group-hover:border-sky-700  p-2 w-full group-hover:bg-[#f3f3f1]">
+                        <i class="fa-solid fa-gear"></i>
+                        <span>Settings</span>
+                    </a>
+                </li>
+
+                <!-- items  -->
+                <li class="pr-2 active hover:text-sky-700 group">
+                    <span class="border-t-[6px] border-transparent group-active:border-sky-700 "></span>
+                    <a href="#"
+                        class="flex flex-col justify-center items-center gap-2 group-hover:border-t-[6px]  group-hover:border-sky-700 px-4  p-2 w-full group-hover:bg-[#f3f3f1]">
+                        <img src=""
+                            class="bg-cover text-sky-700 rounded-full w-4 h-4 bg-[url('./images/user.webp')] bg-cover bg-center imgBtn">
+
+                        <span>More</span>
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <!-- main -area  -->
+        <main>
+            <div class="main">
+
+                <!-- share-link  -->
+                <div
+                    class="share-link-box w-full h-14 rounded-lg bg-blue-200 flex justify-between items-center p-4 mb-4 sm:px-8">
+                    <p class="text-xs leading-6">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        Your <strong>
+                            <i class="fa-solid fa-4 fa-bounce text-sky-800"></i> Links
+                        </strong>
+                        is live :
+
+                        <span class="bg-blue-100 p-2 rounded-lg underline cursor-pointer">
+                            <a href="4links.netlify.app/" id="user-link" target="_blank">4links.netlify.app/</a>@<span
+                                class="userName"></span>
+                    </p>
+                    </span>
+
+                    <button id="copy-link" class="cursor-pointer">
+                        <i class="fa-regular fa-clipboard"></i>
+                    </button>
+                </div>
+
+
+                <!-- buttons links & store -->
+                <div
+                    class="buttons w-fit h-fit mx-4 p-0 border-[1px] border-gray-300 rounded-full flex justify-center items-center group">
+
+                    <a href="#">
+                        <button type="button"
+                            class="bg-black text-white focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 group-active:bg-transparent group-active:text-black">Links</button>
+                    </a>
+
+                    <a href="#"><button type="button"
+                            class="text-gray-900 bg-transparent group-active:bg-black group-active:text-white focus:outline-none font-medium rounded-full text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Store</button>
+                    </a>
+                </div>
+
+
+                <!-- add detalis & links  -->
+
+                <div class="add-details my-4 px-4">
+
+                    <!-- heading and preview btn  -->
+                    <div class="heading flex justify-between items-center">
+
+                        <h2 class="text-2xl font-black">Add Links</h2>
+
+                        <button
+                            class="preview-btn p-2 bg-black text-white active:bg-white active:text-black border-[1px] border-gray-300 rounded-full "
+                            id="preview-btn">Preview</button>
+
+                    </div>
+
+
+                    <form action="">
+
+                        <!-- add -github link  -->
+                        <div
+                            class="dp-upload my-2 flex justify-between items-center gap-2 bg-white shadow-sm px-2 py-4 rounded-lg">
+                            <label for="githubLink" class="w-1/3 text-purple-800">
+                                <i class="fa-brands fa-github"></i> Github</label>
+                            <input type="text" placeholder="Enter Github Link.." name="githubLink" id="githubLink"
+                                class="outline-none w-2/3 opacity-[0.5] focus:opacity-[100] cursor-pointer bg-[#f3f3f1] py-2  px-1 border-b-2 border-gray-400 focus:border-b-2 focus:border-purple-800 focus:text-purple-900 rounded-t-lg">
+                        </div>
+
+                        <!-- add -linkeIn link  -->
+                        <div
+                            class="dp-upload my-2 flex justify-between items-center gap-2 bg-white shadow-sm px-2 py-4 rounded-lg">
+                            <label for="linkedinLink" class="w-1/3 text-sky-700">
+                                <i class="fa-brands fa-linkedin"></i> LinkeIn </label>
+                            <input type="text" placeholder="Enter LinkeIn Link.." name="linkedinLink" id="linkedinLink"
+                                class="outline-none w-2/3 opacity-[0.5] cursor-pointer bg-[#f3f3f1] py-2  px-1 border-b-2 border-gray-400 focus:border-b-2 focus:border-sky-700 focus:text-sky-700 rounded-t-lg">
+                        </div>
+
+
+
+                        <!-- add stack-overflowLink  -->
+                        <div
+                            class="dp-upload my-2 flex justify-between items-center gap-2 bg-white shadow-sm px-2 py-4 rounded-lg">
+                            <label for="stackoverflowLink" class="w-1/3 text-orange-500">
+                                <i class="fa-brands fa-stack-overflow"></i> Stack-overflow </label>
+                            <input type="text" placeholder="Enter Stack-overflow Link.." name="stackoverflowLink"
+                                id="stackoverflowLink"
+                                class="outline-none w-2/3 opacity-[0.5] cursor-pointer bg-[#f3f3f1] py-2  px-1 border-b-2 border-gray-400 focus:border-b-2 focus:border-orange-500 focus:text-orange-500 rounded-t-lg">
+                        </div>
+
+
+
+                        <!-- add -Portfolio link  -->
+                        <div
+                            class="dp-upload my-2 flex justify-between items-center gap-2 bg-white shadow-sm px-2 py-4 rounded-lg">
+                            <label for="githubLink" class="w-1/3 text-gray-700 text-sm">
+                                <i class="fa-solid fa-laptop-code"></i> Portfolio </label>
+                            <input type="text" placeholder="Enter Portfolio Link.." name="portfolioLink"
+                                id="portfolioLink"
+                                class="outline-none w-2/3 opacity-[0.5] cursor-pointer bg-[#f3f3f1] py-2  px-1 border-b-2 border-gray-400 focus:border-b-2 focus:border-gray-700 focus:text-gray-700 rounded-t-lg">
+                        </div>
+
+
+                        <!-- add links-btn  -->
+                        <div class="dp-upload my-2 flex justify-between items-center gap-2 px-2 py-4 rounded-lg ">
+                            <button
+                                class="w-full border-[1px] border-gray-300 bg-black p-4 rounded-full text-white active:text-black active:bg-white"
+                                id="add-data">Add
+                                <i class="fa-regular fa-circle-check"></i></button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </main>
+
+
+        <!-- right-sidebar  -->
+        <div class="right-sidebar border-line border-gray-300 p-2">
+            <div
+                class="r-sidebar sticky top-8  h-[92vh] w-[320px] flex justify-center items-center show">
+
+                <div class="cross">
+                    <button class="p-2 rounded-lg group-active:border-gray-500" id="cross-btn">
+                        <i class="fa-solid fa-xmark text-gray-900 group-active:text-gray-600 text-2xl"></i>
+                    </button>
+                </div>
+                <!-- mockup  -->
+                <div
+                    class="mockup bg-white w-[300px] h-[555px] border-[2px] border-slate-300 rounded-[25px] shadow-lg px-4 mr-6">
+
+                    <!-- edit-btn  -->
+                    <div class="edit-btn absolute right-12 group">
+                        <button
+                            class="border-2 border-gray-300 p-2 rounded-lg group-active:border-gray-400 cursor-pointer"
+                            id="edit-data">
+                            <i class="fa-solid fa-pencil text-gray-400 group-active:text-gray-300"></i>
+                        </button>
+                    </div>
+
+                    <!-- dp box & user-->
+                    <div class="dp-box h-56 bg-white flex flex-col justify-center items-center">
+                        <div
+                            class="dp w-[155px] h-[155px] rounded-full bg-[url('./images/user.webp')] bg-cover bg-center  overflow-hidden bg-slate-500 flex justify-center items-center shadow-md shadow-gray-300 overflow-hidden">
+
+                            <img src="" alt="" class="w-full h-full imgBtn">
+
+                        </div>
+                        <strong
+                            class="mt-4 p-2 bg-[#f3f3f1] rounded-full text-ellipsis overflow-hidden w-1/2 flex justify-center items-center font-sans">@<span
+                                class="userName"></span></strong>
+                    </div>
+
+
+                    <!-- buttons box -->
+
+                    <div
+                        class="buttons-box  h-1/2 py-8 flex flex-col justify-center items-center gap-2">
+
+
+                        <!-- Github  -->
+                        <a href="" class="w-48 flex justify-center items-center" id="githubBtn" target="blank">
+                            <button
+                                class="w-full h-12 p-2 bg-[#f3f3f1] text-purple-800 rounded-lg hover:bg-purple-800 hover:text-white">
+                                <i class="fa-brands fa-github"></i>
+                                <span>
+                                    Github
+                                </span>
+                            </button>
+                        </a>
+
+
+                        <!-- LinkedIn -->
+                        <a href="" class="w-48 flex justify-center items-center " id="linkedinBtn" target="blank">
+                            <button
+                                class="w-full h-12 p-2 bg-[#f3f3f1]  text-sky-700 rounded-lg hover:bg-sky-700 hover:text-white">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <span>
+                                    LinkedIn
+                                </span>
+                            </button>
+                        </a>
+
+                        <!-- stack-overflow-->
+                        <a href="" class="w-48 flex justify-center items-center " id="stackoverflowBtn" target="blank">
+                            <button
+                                class="w-full h-12 p-2 bg-[#f3f3f1] text-orange-600 rounded-lg hover:bg-orange-500 hover:text-white">
+                                <i class="fa-brands fa-stack-overflow"></i>
+                                <span>
+                                    Stack overflow
+                                </span>
+                            </button>
+                        </a>
+
+
+                        <!-- Portfolio-->
+                        <a href="" class="w-48 flex justify-center items-center  " id="portfolioBtn" target="blank">
+                            <button
+                                class="w-full h-12 p-2 bg-[#f3f3f1] text-gray-700 rounded-lg hover:bg-gray-700 hover:text-white">
+                                <i class="fa-solid fa-laptop-code"></i>
+                                Portfolio
+                                </span>
+                            </button>
+                        </a>
+
+                    </div>
+
+
+                    <div class="water-mark text-xs">
+                        <div class="text-gray-600 my-2 flex justify-center items-end">
+                            <p class="cursor-none">Powered by
+                                <i class="fa-solid fa-4 shadow-sm fa-bounce text-sky-700"></i>
+                                <span class="font-black text-black">Links</span>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- login page   -->
+        <div class="login-page absolute z-10 bg-[#f3f3f1] w-screen h-screen flex justify-center items-center">
+            <div class="login-box w-64 h-[390px] bg-white shadow-2xl rounded-[25px] p-4 border-[2px] border-slate-300">
+                <h1 class="text-center text-2xl text-black mb-4">Login</h1>
+                <form action="" class="flex flex-col justify-center items-center text-sm">
+
+                    <label class="img-box cursor-pointer w-24 h-24 rounded-full bg-gray-400 bg-[url('./images/user.webp')] bg-center bg-cover shadow-md overflow-hidden" for="imgLink" title="Click here">
+                    
+                        <img src=" " alt=" " class="w-24 h-24 imgBtn">
+                        
+                    </label>
+                    <span class="text-xs p-2">Img Upload <i class="fa-regular fa-hand fa-bounce text-md"></i></span>
+                    <input type="file" name="imgLink" id="imgLink" class="opacity-0">
+                    <!-- add userNameLink  -->
+                    <div class="user-name-write flex justify-between items-center gap-2 bg-white shadow-sm p-2  rounded-lg text-xs">
+                        <label for="userNameLink " class="w-1/3 text-black flex flex-col justify-center items-center">
+                            <i class="fa-solid fa-signature"></i> Username</label>
+                        <input type="text" placeholder="username.." name="userNameLink " id="userNameLink"
+                            class="outline-none w-2/3 opacity-[0.5] cursor-pointer bg-[#f3f3f1] py-2  px-1 border-b-2 border-gray-400 focus:border-b-2 focus:border-black focus:text-black rounded-t-lg">
+                    </div>
+                    <div class="text-[10px] flex justify-end items-end text-blue-600 w-full cursor-pointer hover:underline"> Forget username?</div>
+
+
+                        <!-- add links-btn  -->
+                        <div class="login my-2 w-full flex justify-between items-center gap-2 p-2">
+                            <button
+                                class="w-full border-[1px] border-gray-300 bg-black p-2 px-6 rounded-full text-white active:text-black active:bg-white group"
+                                id="login-btn">Login
+                                <i class="fa-solid fa-person-running"></i>
+                            </button>
+                        </div>
+                        <div class="water-mark text-[10px]">
+                            <div class="text-gray-600 my-2 flex justify-center items-end">
+                                <p class="cursor-none">Powered by
+                                    <i class="fa-solid fa-4 shadow-sm fa-bounce text-sky-700"></i>
+                                    <span class="font-black text-black">Links</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="./js/script.js"></script>
+
+    <script src="./js/data.js"></script>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>
